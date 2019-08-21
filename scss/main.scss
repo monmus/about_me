@@ -766,12 +766,15 @@ section>.container {
   }
 
   .portfolio {
+    .project-box{
+      height: 400px;
+    }
     .project-info {
       h5 {
         font-size: 1.1em;
       }
       .desc {
-        display: none;
+        display: block;
       }
       .tech-box {
         font-size: 0.8em ;

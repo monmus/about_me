@@ -39,6 +39,13 @@ section>.container {
   font-size: 1em;
 }
 
+hr {
+	width: 100%;
+	height: 1px;
+	background-color: #d07c7c;
+	border: none;
+}
+
 // HEADER
 
 .header {
@@ -175,9 +182,7 @@ section>.container {
         }
       }
     }
-    .introduction-shadow {
-      box-shadow: $shadow;
-    }
+   
   }
 }
 
@@ -279,9 +284,6 @@ section>.container {
   flex-wrap: wrap;
  
   .skills-desc {
-    margin-bottom: 3rem;
-   
-    width: 90%;
     h3{
       padding-top: 10px;
       text-align: center;
@@ -349,7 +351,7 @@ section>.container {
   background-color: #fff;
   text-align: center;
   h3.headline {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   p.portfolio-info {
     display: block;
@@ -474,7 +476,7 @@ section>.container {
 .contact {
     color:  #313335;
     width:100%;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     background-image: url("../images/back1.jpg");
     background-size: cover;
@@ -615,7 +617,7 @@ section>.container {
 
   .footer {
     background-color: #313335;
-    height: 10rem;
+    height: 8rem;
     color: white;
     display: flex;
     position: relative;

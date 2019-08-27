@@ -150,6 +150,10 @@
       <i class="icon devicon-visualstudio-plain"></i>
       <span class="name">Visual Studio</span>
     </div>
+    <div class="skill-container large">
+      <i class="icon devicon-trello-plain"></i>
+      <span class="name">Trello</span>
+    </div>
   </div>
   </div>
 </section>
@@ -281,7 +285,7 @@
       <h2 class="contacttext-header">Kontakt  </h2>
       <p class="contacttext-main">Zapraszam do odwiedzenia moich profili na portalach społecznościowych.</p>
       <div class="social-icons">
-        <div class="wrapper">
+        <!-- <div class="wrapper"> -->
             <a href="https://www.linkedin.com/in//" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
@@ -291,7 +295,7 @@
             <a href="http://github.com/monmus" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-        </div>
+        <!-- </div> -->
       </div>
       <p><span>Miasto:   </span>
         <span> Krakow</span>
@@ -307,13 +311,12 @@
       
       </article>
       <article class="contact-form">
-        <form class="form">
-          <input value="" placeholder="Twoje imię:" type="text">
-          <input value="" placeholder="E-mail:" type="text">
-          <textarea placeholder="Napisz wiadomość">
-    
-          </textarea>
-          <button>wyślij wiadomość</button>
+        <form class="form" id='contactForm'>
+          <input value="" placeholder="Twoje imię:" type="text" id="name" required>
+          <input value="" placeholder="E-mail:" type="text" id="email" required>
+          <textarea placeholder="Napisz wiadomość" id="message"></textarea>
+          <button type="submit">wyślij wiadomość</button>
+          <div class="alert">Twoja wiadomość została wysłana</div>
         </form>
       </article>
     
@@ -324,6 +327,9 @@
     <section class="footer">
       <p>©2019 Monika Bilska</p>
     </section>
+
+<script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script>
 
 <script src="./js/script.js"></script>
 

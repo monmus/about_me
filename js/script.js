@@ -51,3 +51,65 @@ let toggleMenu = () => {
 
 menuIcon.addEventListener('click', toggleMenu);
 menuLinks.addEventListener('click', toggleMenu);
+
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCiCOA1wWBFdReGAF6rR8GJ7A-KWa9fG28",
+  authDomain: "contactform-2c4d3.firebaseapp.com",
+  databaseURL: "https://contactform-2c4d3.firebaseio.com",
+  projectId: "contactform-2c4d3",
+  storageBucket: "",
+  messagingSenderId: "1081101640993",
+  appId: "1:1081101640993:web:3b21131b1033cbe6"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//reference messages collection
+var messagesRef = firebase.database().ref("messages");
+
+
+
+//listen for form submit
+
+const form = document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+
+  //get values
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+  var message = getInputVal('message');
+
+  //save message
+  saveMessage(name, email, message)
+
+  //show alert
+  var alertBlock = document.querySelector('.alert').style.display = 'block';
+
+  // hide alert after 3 seconds
+  setTimeout(function(){
+  alertBlock = document.querySelector('.alert').style.display = 'none';
+
+}, 3000)
+
+document.getElementById('contactForm').reset();
+}
+
+//function to get form values
+function getInputVal(id){
+  return document.getElementById(id).value
+}
+
+//save the message to firebase
+
+function saveMessage(name, email, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    message: message
+  });
+}

@@ -5,9 +5,9 @@ window.addEventListener('load', () => {
 
   // typing start after page load
   typedText.classList.add('anim-typewriter');
-  setTimeout(() => {
-    introduction.classList.add('introduction-shadow');
-  }, 2600);
+  // setTimeout(() => {
+  //   introduction.classList.add('introduction-shadow');
+  // }, 2600);
 
   // check if device is touchable and remove hover from portfolios
   hasTouch();

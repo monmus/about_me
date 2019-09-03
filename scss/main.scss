@@ -363,13 +363,14 @@ ul.actions{
     text-align: center;
     margin: 0 0.85rem 1.45rem 0.85rem;
     }
+  
     
     .skill-container:hover{
       color: #092005;
       animation: shake 0.5s; 
     }
       .icon {
-        font-size: 4.25rem;
+        font-size: 2.25rem;
         margin-bottom: 0.75rem;
        
       }
@@ -643,6 +644,7 @@ ul.actions{
           width: 11rem;
           background-color: #313335;
           color: #fff;
+          text-align: center;
           padding: 1rem;
           cursor: pointer;
           border: none;
@@ -652,7 +654,15 @@ ul.actions{
             width: 50%;
           }
           @media only screen and (max-width: 519px) {
-            width: 50%;
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          @media only screen and (max-width: 380px) {
+            width: 100%;
+            text-align: center;
             display:flex;
             justify-content: center;
             align-items: center;
@@ -676,10 +686,28 @@ ul.actions{
           width: 80%;
           background-color: navy;
           display: none;
+          @media only screen and (max-width: 519px) {
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+          }
+          @media only screen and (max-width: 380px) {
+            width: 100%;
+            font-size: 15px;
+            display:flex;
+            text-align: center;
+            display: none;
+            position: relative;
+            bottom: -5px;
+            
+          }
         }
       }
     }
   }
+
 
 
   .footer {

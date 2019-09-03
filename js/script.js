@@ -89,13 +89,17 @@ function submitForm(e){
   //show alert
   var alertBlock = document.querySelector('.alert').style.display = 'block';
 
-  // hide alert after 3 seconds
+  // hide alert after 5 seconds
   setTimeout(function(){
   alertBlock = document.querySelector('.alert').style.display = 'none';
 
-}, 3000)
+}, 4000)
 
-document.getElementById('contactForm').reset();
+  setTimeout(function(){
+    document.getElementById('contactForm').reset();
+  }, 4000)
+
+// document.getElementById('contactForm').reset();
 }
 
 //function to get form values
